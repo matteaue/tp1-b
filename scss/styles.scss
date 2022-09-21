@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+/**
+ * @author COLLECTIF - @TIMCSF
+ *
+ * TABLE DES MATIERES
+ * Normalize
+ * Utilitaires
+ * Charte typographique
+ * Menu
+ * Grille
+ * Mise en page
+ *** Contenus principal et complémentaire
+ *** Architecture des CSS (liste de définitions)
+ *** Pied de page
+ */
+
+/* Normalize
+   ========================================================================== */
+@import "normalize";
+
+/* Utilitaires
+   ========================================================================== */
+@import "utilitaires";
+
+/* Charte typographique
+   ========================================================================== */
+@import "typo";
+
+/* Grille
+   ========================================================================== */
+@import "grille";
+
+/* Mise en page
+   ========================================================================== */
+.entete {
+  background-color: black;
+  padding: 20px 0px 20px 0;
+    .list-header{
+      list-style: none;
+      display: flex;
+      align-items: center;
+      max-width: 230px;
+     padding-left: 20px;
+      .list-header__item{
+       &:first-child{
+        padding-right: 10px;
+         border-right: 2px solid white;
+      }
+      &:last-child{
+        padding-left: 10px;
+      }
+        a{
+        display: flex;
+        align-items: center;
+          }
+         a>.abstract_text{
+          text-align: center;
+        } 
+      }
+    }
+  @media(min-width: 1000px){
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+  }
+}
+
+nav{
+  .nav__list{
+    margin-top: 30px;
+    padding: 0;
+  @media(min-width:1000px){
+    display: flex;
+  }
+    &-item{
+      text-align: center;
+      list-style: none;
+    }
+
+    &-item:first-child{
+      padding-bottom:15px;
+      border-bottom: 2px solid $white;
+      @media(min-width:1000px){
+        padding: 0;
+        border: none;
+      }
+      .nav__request--button{
+        background-color: transparent;
+        color: white;
+        border: none;
+      }
+
+    }
+    &-item:last-child{
+      padding-top: 15px;
+      @media(min-width:1000px){
+        padding: 0;
+        border: none;
+      }
+      .nav__sign--button{
+        background-color: transparent;
+        color: white;
+        border: none;
+        @media(min-width:1000px){
+          background-color:$contrast-color;
+          padding: 10px 15px;
+          border-radius: 5px;
+        }
+        }
+    }
+  }
+}
+
+.help-section {
+  background-color: $help-color;
+  padding: 80px 15px 115px 15px;
+  text-align: center;
+  justify-content: center;
+
+  .help-section__search--bar {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 720px;
+  }
+}
+
+.subject-list {
+
+  &__item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+  @media(min-width: 1000px){
+    columns: 2;
+    padding: 0 2em;
+  }
+}
+
+.category-list-svg-icon {
+  max-width: 86px;
+  max-height: 86px;
+  margin-right: 30px;
+  align-content: center;
+  justify-content: center;
+}
+
+/* Footer
+   ========================================================================== */
+.footer-container {
+  padding: 15px 15px 80px 15px;
+  background-color: black;
+  color: white;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0;
+
+  @media(min-width:1000px) {
+    display: flex;
+    justify-content: space-between;
+    .footer-nav__item:last-child{
+      align-self: flex-end;
+    }
+  }
+
+  .footer-nav__item {
+    list-style: none;
+    margin-top: 10px;
+    ul {
+      padding-left: 0;
+      >li {
+        list-style: none;
+        .contact{
+          margin-bottom: 0;
+        }
+        .email{
+          margin: 0;
+        }
+      }
+    }
+
+    .footer-link {
+      color: white;
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+
+      &:focus,
+      &:visited {
+        text-decoration: underline;
+      }
+    }
+    .website-img{
+      max-width: 48px;
+    }
+    &:last-child{
+      p{
+        margin: 0;
+      }
+    }
+  }
+
+}

@@ -17,28 +17,40 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>Mystère sur Québec | Carte</title>
+    <title>Abstract - Help</title>
 </head>
 
 <body>
     <a href="#contenu" class="screen-reader-only focusable sauter">Allez au contenu</a>
     <header role="banner" class="entete">
-        <a href="" class="logo"><img src="">Abstract</img></a>
-        <a class="aide" href="">Help Center</a>
-        <nav>
-            <button class="nav__request--button">Submit a request</button>
-            <button class="nav__sign--button">Sign in</button>
-        </nav>
+        <ul class="list-header">
+            <li class="list-header__item"><a href=""><img class="logo" src="/images/moon.png" style="width: 30px; padding-right: 5px;"></img><span class="abstract_text">Abstract</span></a></li>
+            <li class="list-header__item aide"><a href="https://help.abstract.com/hc/en-us">Help Center</a></li>
+        </ul>
+<!--        <div>-->
+<!--            <button class="btn btn&#45;&#45;topbar btn&#45;&#45;toggle-search"><span></span></button>-->
+<!--            <button class="btn btn&#45;&#45;topbar btn&#45;&#45;toggle-search"><span></span></button>-->
+<!--        </div>-->
+            <nav class="nav nav--closed">
+                <ul class="nav__list">
+                    <li class="nav__list-item">
+                        <a href="https://help.abstract.com/hc/en-us/articles/360050382291-Contact-Support" class="nav__link"><button class="nav__request--button">Submit a request</button></a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="https://help.abstract.com/hc/en-us" class="nav__link"><button class="nav__sign--button">Sign in</button></a>
+                    </li>
+                </ul>
+            </nav>
     </header>
     <main id="contenu">
-        <div class="help-section">
+        <section class="help-section">
             <h1 class="help-section__title">How can we help?</h1>
-            <input type="text" placeholder="Search.." class="help-section__search--bar">
-        </div>
+            <input type="text" placeholder="Search.." class="help-section__search--bar" aria-label="recherche">
+        </section>
         <div class="subject-section">
             <ul class="subject-list">
                 <li class="subject-list__item">
-                    <img src=""></img>
+                    <img src="/images/abstractimg.png" class="category-list-svg-icon"></img>
                     <div class="subject-list__item--info">
                         <h2 class="subject-list__item--title">Branches</h2>
                         <p class="subject-list__item--description">Abstract Branches lets you manage, version, and document your designs in one place.</p>
@@ -46,7 +58,7 @@
                     </div>
                 </li>
                 <li class="subject-list__item">
-                    <img src=""></img>
+                    <img src="/images/accountsimg.png" class="category-list-svg-icon"></img>
                     <div class="subject-list__item--info">
                         <h2 class="subject-list__item--title"> Manage your account</h2>
                         <p class="subject-list__item--description">Configure your account settings, such as your email, profile details, and password.</p>
@@ -54,7 +66,7 @@
                     </div>
                 </li>
                 <li class="subject-list__item">
-                    <img src=""></img>
+                    <img src="/images/teamprojectsimg.png" class="category-list-svg-icon"></img>
                     <div class="subject-list__item--info">
                         <h2 class="subject-list__item--title">Manage organizations, teams, and projects</h2>
                         <p class="subject-list__item--description">Use Abstract organizations, teams, and projects to organize your people and your work.</p>
@@ -62,7 +74,7 @@
                     </div>
                 </li>
                 <li class="subject-list__item">
-                    <img src=""></img>
+                    <img src="/images/billingimg.png" class="category-list-svg-icon"></img>
                     <div class="subject-list__item--info">
                         <h2 class="subject-list__item--title">Manage billing</h2>
                         <p class="subject-list__item--description">Change subscriptions and payment details.</p>
@@ -70,7 +82,7 @@
                     </div>
                 </li>
                 <li class="subject-list__item">
-                    <img src=""></img>
+                    <img src="/images/authenticateimg.png" class="category-list-svg-icon"></img>
                     <div class="subject-list__item--info">
                         <h2 class="subject-list__item--title">Authenticate to Abstract</h2>
                         <p class="subject-list__item--description">Set up and configure SSO, SCIM, and Just-in-Time provisioning.</p>
@@ -78,7 +90,7 @@
                     </div>
                 </li>
                 <li class="subject-list__item">
-                    <img src=""></img>
+                    <img src="/images/supportimg.png" class="category-list-svg-icon"></img>
                     <div class="subject-list__item--info">
                         <h2 class="subject-list__item--title">Abstract support</h2>
                         <p class="subject-list__item--description">Get in touch with human.</p>
@@ -88,38 +100,51 @@
             </ul>
         </div>
     </main>
-    <footer>
-        <div class="footer-container">
+    <footer class="footer-container">
+        <div>
             <ul class="footer-nav">
                 <li class="footer-nav__item">
                     <h3>Abstract</h3>
-                    <a href="">Branches</a>
+                    <a class="footer-link" href="">Branches</a>
                 </li>
                 <li class="footer-nav__item">
                         <h3>Ressources</h3>
-                        <a href="">Blog</a>
-                        <a href="">Help Center</a>
-                        <a href="">Release Notes</a>
-                        <a href="">Status</a>
+                        <ul>
+                            <li><a class="footer-link" href="">Blog</a></li>
+                            <li><a class="footer-link" href="">Help Center</a></li>
+                            <li><a class="footer-link" href="">Release Notes</a></li>
+                            <li><a class="footer-link" href="">Status</a></li>
+                        </ul>
                 </li>
                 <li class="footer-nav__item">
                     <h3>Community</h3>
-                        <a href="">Twitter</a>
-                        <a href="">Linkedin</a>
-                        <a href="">Facebook</a>
-                        <a href="">Dribble</a>
-                        <a href="">Podcast</a>
+                    <ul>
+                     <li><a class="footer-link" href="">Twitter</a></li>
+                     <li><a class="footer-link" href="">Linkedin</a></li>
+                     <li><a class="footer-link" href="">Facebook</a></li>
+                     <li><a class="footer-link" href="">Dribble</a></li>
+                     <li><a class="footer-link" href="">Podcast</a></li>
+                    </ul>
                 </li>
                 <li class="footer-nav__item">
                     <h3>Company</h3>
-                        <a href="">About us</a>
-                        <a href="">Careers</a>
-                        <a href="">Legal</a>
-                        <h4>Contact Us</h4>
-                        <p>info@abstract.com</p>
+                    <ul>
+                        <li><a class="footer-link" href="">About us</a></li>
+                        <li><a class="footer-link" href="">Careers</a></li>
+                        <li><a class="footer-link" href="">Legal</a></li>
+                        <li><h4 class="contact">Contact Us</h4><p class="email">info@abstract.com</p></li>
+                    </ul>
+                </li>
+                <li class="footer-nav__item">
+                    <a href="index.html"><img class="website-img" src="/images/moon.png"></img></a>
+                    <p><small>© Copyright 2022</small></p>
+                    <p><small>Abstract Studio Design, Inc.</small></p>
+                    <p><small>All rights reserved</small></p>
                 </li>
             </ul>
+
         </div>
     </footer>
+</body>
 </body>
 </html>
