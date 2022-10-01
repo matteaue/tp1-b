@@ -9,8 +9,6 @@
  * Menu
  * Grille
  * Mise en page
- *** Contenus principal et complémentaire
- *** Architecture des CSS (liste de définitions)
  *** Pied de page
  */
 /* Normalize
@@ -611,6 +609,11 @@ h4,
   max-width: 230px;
   padding-left: 20px;
 }
+@media (min-width: 1000px) {
+  .entete .list-header {
+    margin-left: 4em;
+  }
+}
 .entete .list-header .list-header__item:first-child {
   padding-right: 10px;
   border-right: 2px solid white;
@@ -621,6 +624,14 @@ h4,
 .entete .list-header .list-header__item a {
   display: flex;
   align-items: center;
+  color: whitesmoke;
+  width: 100px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.entete .list-header .list-header__item a:hover,
+.entete .list-header .list-header__item a :active {
+  text-decoration: underline;
 }
 .entete .list-header .list-header__item a > .abstract_text {
   text-align: center;
@@ -633,6 +644,11 @@ h4,
   }
 }
 
+@media (min-width: 1000px) {
+  nav {
+    margin-right: 4em;
+  }
+}
 nav .nav__list {
   margin-top: 30px;
   padding: 0;
@@ -657,9 +673,12 @@ nav .nav__list-item:first-child {
   }
 }
 nav .nav__list-item:first-child .nav__request--button {
-  background-color: transparent;
+  background-color: #161616;
   color: white;
-  border: none;
+  border: 1px solid white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-right: 10px;
 }
 nav .nav__list-item:last-child {
   padding-top: 15px;
@@ -681,6 +700,11 @@ nav .nav__list-item:last-child .nav__sign--button {
     padding: 10px 15px;
     border-radius: 5px;
   }
+  nav .nav__list-item:last-child .nav__sign--button:hover,
+nav .nav__list-item:last-child .nav__sign--button :active {
+    background-color: white;
+    color: black;
+  }
 }
 
 .help-section {
@@ -690,21 +714,67 @@ nav .nav__list-item:last-child .nav__sign--button {
   justify-content: center;
 }
 .help-section .help-section__search--bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   margin-right: auto;
   margin-left: auto;
-  max-width: 720px;
+  width: 300px;
+  padding: 16px 24px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+@media (min-width: 1000px) {
+  .help-section .help-section__search--bar {
+    width: 500px;
+  }
+}
+.help-section .submit-button {
+  display: none;
+}
+.help-section .fa.fa-arrow-right {
+  transform: translate(100px, 18px);
+  position: absolute;
+  width: 48px;
+  z-index: 100;
+}
+@media (min-width: 1000px) {
+  .help-section .fa.fa-arrow-right {
+    transform: translate(200px, 18px);
+  }
+}
+.help-section .fa.fa-arrow-right:hover {
+  color: #4C5FD5;
 }
 
-.subject-list__item {
+@media (min-width: 1000px) {
+  .subject-section {
+    margin: auto 4em;
+  }
+}
+.subject-section .subject-list__item {
   list-style: none;
   display: flex;
   align-items: center;
   margin-bottom: 48px;
 }
+.subject-section .subject-list__item--info .subject-list__item--link {
+  color: #4C5FD5;
+  text-decoration: none;
+  font-weight: 500;
+}
+.subject-section .subject-list__item--info .subject-list__item--link:hover,
+.subject-section .subject-list__item--info .subject-list__item--link :active {
+  text-decoration: underline;
+}
 @media (min-width: 1000px) {
-  .subject-list {
-    columns: 2;
-    padding: 0 2em;
+  .subject-section .subject-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
   }
 }
 
@@ -716,12 +786,22 @@ nav .nav__list-item:last-child .nav__sign--button {
   justify-content: center;
 }
 
-/* Footer
+/*  *** Pied de page
    ========================================================================== */
 .footer-container {
   padding: 15px 15px 80px 15px;
   background-color: black;
   color: white;
+}
+@media (min-width: 1000px) {
+  .footer-container {
+    padding: auto 4em;
+  }
+}
+@media (min-width: 1000px) {
+  .footer-container div {
+    margin: auto 4em;
+  }
 }
 
 .footer-nav {
